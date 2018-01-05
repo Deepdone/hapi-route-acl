@@ -29,15 +29,14 @@
     "lodash": ""
   },
   "peerDependencies": {
-    "hapi": ">=8.x.x"
+    "hapi": ">=17.x.x"
   },
   "devDependencies": {
-    "code": "^1.3.0",
-    "hapi": "^8.3.1",
+    "code": "",
     "hapi": "",
-    "lab": "^5.5.0"
+    "lab": ""
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=8"
   }
 }
