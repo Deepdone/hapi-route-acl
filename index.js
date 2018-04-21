@@ -28,7 +28,8 @@ internals.implementation = function(request, h) {
     let requiredPermissions =
       request.route.settings.plugins[internals.pluginName].permissions;
     if (!_.isEmpty(requiredPermissions)) {
-      internals.permissionsFunc(request.auth.credentials, function(
+      //internals.permissionsFunc(request.auth.credentials, function(
+      internals.permissionsFunc(request, function(
         error,
         userPermissions
       ) {
