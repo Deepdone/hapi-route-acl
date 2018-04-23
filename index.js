@@ -23,13 +23,13 @@ exports.plugin = {
   pkg: require("./package.json")
 };
 
-internals.implementation = function(request, h) {
+internals.implementation =async function(request, h) {
   if (!_.isEmpty(request.route.settings.plugins[internals.pluginName])) {
     let requiredPermissions =
       request.route.settings.plugins[internals.pluginName].permissions;
     if (!_.isEmpty(requiredPermissions)) {
       //internals.permissionsFunc(request.auth.credentials, function(
-      internals.permissionsFunc(request, h,function(
+      await internals.permissionsFunc(request, h,function(
         error,
         userPermissions
       ) {
